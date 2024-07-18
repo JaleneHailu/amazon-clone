@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import classes from './Header.module.css'
 import {SlLocationPin} from "react-icons/sl"
 import {BsSearch} from "react-icons/bs"
 import {BiCart} from "react-icons/bi"
 import logo from '../../assets/logo.ico'
-import flag from '../../assets/flag.png'
+import flag from '../../assets/logo.png'
 import LowerHeader from './LowerHeader'
 
 const Header = () => {
@@ -13,9 +14,9 @@ return (
     <section >
             <div className={classes.header_container}>
                 <div className={classes.logo_container}>
-                <a href=''>
+                <Link href='./'>
                     <img src={logo} alt="" />
-                </a>
+                </Link>
                 <div className={classes.delivery}>
                 <span>
                     <SlLocationPin />
@@ -34,26 +35,26 @@ return (
             <BsSearch />
             </div>
             <div className={classes.order_container}>
-                <a href='' className={classes.language}>
+                <Link href='' className={classes.language}>
                     <img src={flag} alt="" />
                     <select>
                         <option value="">EN</option>
                     </select>
-                </a>
-                <a href="">
+                </Link>
+                <Link href="/Linkuth">
                     <div>
                         <p>Sign In</p>
                         <span>Account & List</span>
                     </div>
-                </a>
-                <a href="">
+                </Link>
+                <Link href="">
                     <p>returns</p>
                     <span>& Orders</span>
-                </a>
-                <a href="" className={classes.cart}>
+                </Link>
+                <Link href="" className={classes.cart}>
                     <BiCart size={35} />
                     <span>0</span>
-                </a>
+                </Link>
             </div>
             </div>
         </section>
