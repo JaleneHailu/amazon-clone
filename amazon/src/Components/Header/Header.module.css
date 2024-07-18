@@ -1,4 +1,7 @@
-
+* {
+    padding: 0;
+    margin: 0;
+}
 .header_container {
     background-color: #1a1a1a;
     display: flex;
@@ -9,9 +12,9 @@
 }
 .logo_container{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
-    min-width: 250px;
+    max-width: 250px;
 }
 .logo_container img{
     width: 80%;
@@ -39,22 +42,23 @@
     width: 100%;
     flex: 1;
 }
-.search select,
-.search input{
+.search select{
 padding: 10px;
 font-weight: bold;
 outline: 1px, solid white;
-}
-.search select{
-    border: none;
+margin-top: 0.1px;
+border: none;
 }
 .search input{
     border: 1px, solid white;
     width: 100%;
     margin-right: -2px;
+    padding: 8.1px;
+    font-weight: bold;
+    outline: 1px, solid white;
 }
 .search svg{
-    padding: 7px;
+    padding: 10px;
     background: #febd69;
     color: #1a1a1a;
 }
@@ -62,5 +66,83 @@ outline: 1px, solid white;
     background-color: #d49644;
 }
 .search:focus-within{
-    border: 2px, solid rgb(235, 161, 173);
+    border: 2px, solid rgb(235, 161,);
+}
+.order_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    gap: 10px;
+}
+.order_container a {
+    text-decoration: none;
+    color: white;
+}
+.order_container p{
+    font-size: 10px;
+}
+.language {
+    width: 100px;
+    display: flex;
+    padding: 10px;
+}
+.language select{
+    background-color: #1a1a1a;
+    border: none;
+    color: white;
+}
+.language img{
+    width: 40%;
+}
+.cart{
+    position: relative;
+}
+.cart span{
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    font-size: 20px;
+    border-color: #1a1a1a;
+    left: 16px;
+    color: orange;
+}
+.order_container a:hover,
+.delivery:hover,
+.logo_container a:hover,
+.lower_container ul li:hover{
+    border: 1x solid white;
+    border-radius: 3px;
+}
+
+.lower_container{
+    background-color: #232f3e;
+    color: white;
+}
+.lower_container ul{
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+.lower_container ul li{
+    padding: 8px;
+}
+.lower_container ul li:first-child{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .header_container{
+        display: flex;
+        flex-direction: column !important;
+        height: auto;
+    }
+    .lower_container ul li:not(:first-child){
+        display: none;
+    }
+    .language{
+        display: none;
+    }
 }

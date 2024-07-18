@@ -3,15 +3,17 @@ import classes from './Header.module.css'
 import {SlLocationPin} from "react-icons/sl"
 import {BsSearch} from "react-icons/bs"
 import {BiCart} from "react-icons/bi"
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.ico'
 import flag from '../../assets/flag.png'
+import LowerHeader from './LowerHeader'
 
 const Header = () => {
 return (
-    <section className=''>
+    <>
+    <section >
             <div className={classes.header_container}>
                 <div className={classes.logo_container}>
-                <a href="">
+                <a href=''>
                     <img src={logo} alt="" />
                 </a>
                 <div className={classes.delivery}>
@@ -28,16 +30,16 @@ return (
             <select name="" id="">
             <option value="">ALL</option>
             </select>
-            <input type="text" name='' id='' placeholder='search products' />
+            <input type="text"/>
             <BsSearch />
             </div>
-            <div>
-                <div>
+            <div className={classes.order_container}>
+                <a href='' className={classes.language}>
                     <img src={flag} alt="" />
                     <select>
                         <option value="">EN</option>
                     </select>
-                </div>
+                </a>
                 <a href="">
                     <div>
                         <p>Sign In</p>
@@ -48,13 +50,15 @@ return (
                     <p>returns</p>
                     <span>& Orders</span>
                 </a>
-                <a href="">
-                    <BiCart />
+                <a href="" className={classes.cart}>
+                    <BiCart size={35} />
                     <span>0</span>
                 </a>
             </div>
             </div>
         </section>
+        <LowerHeader />
+        </>
 )
 }
 
