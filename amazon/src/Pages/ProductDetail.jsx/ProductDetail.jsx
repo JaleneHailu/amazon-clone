@@ -48,6 +48,7 @@ const ProductDetail = () => {
         <ProductCard product={product}
         flex = {true}
         renderDesc={true}
+        renderAdd={true}
          />
       ) : (
         <p>Product not found</p>
