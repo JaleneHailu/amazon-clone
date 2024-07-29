@@ -22,7 +22,7 @@ const Header = () => {
     try {
       await auth.signOut();
       // Clear user data in context after sign out
-      dispatch({ type: 'SET_USER', user: null });
+      dispatch({ type: "SET_USER", user: null });
     } catch (error) {
       console.error("Error signing out: ", error.message);
     }
@@ -50,8 +50,8 @@ const Header = () => {
             <select name="" id="">
               <option value="">ALL</option>
             </select>
-            <input type="text" />
-            <BsSearch size={35} />
+            <input type="text"></input>
+            <BsSearch size={26} />
           </div>
           <div className={classes.order_container}>
             <Link to="" className={classes.language}>
@@ -64,7 +64,7 @@ const Header = () => {
               {user ? (
                 <div>
                   <p>Hello {user.email.split("@")[0]}</p>
-                  <span onClick={handleSignOut} style={{ cursor: 'pointer' }}>
+                  <span onClick={handleSignOut} style={{ cursor: "pointer" }}>
                     Sign Out
                   </span>
                 </div>

@@ -77,7 +77,20 @@ const Auth = () => {
       </Link>
       <div className={classes.login_container}>
         <h1>Sign In</h1>
-        {msg && <small style={{ color: 'red', padding: '5px', textAlign: "center", fontWeight: "bold", margin: "15px", marginLeft: "15vh"}}>{msg}</small>}
+        {msg && (
+          <small
+            style={{
+              color: "red",
+              padding: "5px",
+              textAlign: "center",
+              fontWeight: "bold",
+              margin: "15px",
+              marginLeft: "15vh",
+            }}
+          >
+            {msg}
+          </small>
+        )}
         <form>
           <div>
             <label htmlFor="email">Email</label>

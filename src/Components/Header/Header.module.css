@@ -44,8 +44,9 @@
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
+  width: 50%;
   flex: 1;
+  background-color: #ffffff;
 }
 .search select {
   padding: 10px;
@@ -63,7 +64,7 @@
   outline: 1px, solid white;
 }
 .search svg {
-  padding: 10px;
+  padding: 5px;
   background: #febd69;
   color: #1a1a1a;
 }
